@@ -30,6 +30,7 @@ import {
 import { eq } from "drizzle-orm"
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function Page({ params }) {
   const [mockOBJ, setMockOBJ] = useState(null)
@@ -270,6 +271,30 @@ function ResultComponent({question_answers,evaluation_title,evaluation_type,user
 }
 
 function QuestionBubble({markText}){
+  const [loading, setLoading] = useState(true);
+  function generateRandomNumber() {
+    return Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+  }
+  useEffect(() => {
+
+    const sto = setTimeout(() => {
+      setLoading(false);
+    }, generateRandomNumber());
+    
+    return () => clearTimeout(sto);
+  }, [])
+  
+
+  if(loading) {
+    return (
+    <li className="flex gap-x-2 sm:gap-x-4">
+      <div className="bg-white border border-gray-200 rounded-lg p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700">
+        <Skeleton className="h-4 w-[200px]" />
+        <Skeleton className="h-4 w-[150px]" />
+      </div>
+    </li>
+  )
+}
   return (
   <li className="flex gap-x-2 sm:gap-x-4">
     <div className="bg-white border border-gray-200 rounded-lg p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700">

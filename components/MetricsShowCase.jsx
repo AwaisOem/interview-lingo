@@ -13,7 +13,7 @@ const MetricsShowCase = ({chartData}) => {
               }}
               className="mx-auto  h-[320px] w-full"
             >
-              <RadarChart data={chartData}>
+              <RadarChart  data={JSON.parse(chartData)}>
                 <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
                 <PolarAngleAxis dataKey="metric" />
                 <PolarGrid />

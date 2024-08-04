@@ -46,12 +46,11 @@ export default function Page({ params }) {
               </Badge>
               <CallCard mockID={mockID} />
               <Alert className="w-[300px] p-7">
-                {/* <RocketIcon className="h-4 w-4" /> */}
-                {/* <AlertTitle>Instructions!</AlertTitle> */}
                 <AlertDescription>
                   <ul className="list-disc">
                     <li>Click Speak Button to Talk back to AI voice bot.</li>
                     <li>Click intrrupt to stop sentence that AI speeking.</li>
+                    <li>Don't refresh between session.</li>
                   </ul>
                 </AlertDescription>
               </Alert>
@@ -262,7 +261,7 @@ function CallCard({mockID}) {
   return (
     <Card className="w-[300px]">
     <CardHeader>
-        <CardTitle>Full Stack Development</CardTitle>
+        <CardTitle>{mockEvalObj?.mockTitle ?? "Voice Evaluation"}</CardTitle>
         <CardDescription className="text-xs truncate">ID: {mockID}</CardDescription>
     </CardHeader>
     <CardContent className="flex justify-center flex-col items-center gap-4">
