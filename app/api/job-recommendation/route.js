@@ -85,7 +85,6 @@ export async function POST(request) {
 
     // Limit to 5 jobs if there are more than 5
     const limitedJobs = jobs.slice(0, 5);
-    console.log(limitedJobs)
 
     return new Response(JSON.stringify({ jobs: limitedJobs }), { status: 200, headers: { 'Content-Type': 'application/json' } });
   } catch (error) {

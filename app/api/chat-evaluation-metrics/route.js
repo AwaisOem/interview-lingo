@@ -11,7 +11,6 @@ export async function POST(request) {
             user_details,
             question_answers
         } = await request.json();
-        console.log(question_answers)
         
         if (!evaluation_title || !evaluation_type || !user_details || !question_answers) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });

@@ -61,7 +61,6 @@ export default function Page({ params }) {
     }, [])
     
     const handleFinish = ()=>{
-      console.log(questions)
       setFinished(true);
       setConversation(p=>[...p, <ResultComponent key={"finish"}  question_answers={questions} evaluation_title={mockOBJ.mockTitle} evaluation_type={mockOBJ.mockType} mockID={mockID} user_details={mockOBJ.mockDesc}   />])
     }

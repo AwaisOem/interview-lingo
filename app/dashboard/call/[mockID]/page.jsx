@@ -106,9 +106,7 @@ function CallCard({mockID}) {
 
     try {
       const localStorage_conversation = localStorage.getItem('conversation');
-      console.log(localStorage_conversation);
       const questions_answers = convertToQuestionAnswersFormat(JSON.parse(localStorage_conversation))
-      console.log(questions_answers);
 
       let data_for_api = {question_answers:JSON.stringify(questions_answers)}
       if(mockEvalObj===null){
@@ -131,7 +129,6 @@ function CallCard({mockID}) {
       let response =await axios.post(`/api/chat-evaluation-metrics`,data_for_api);
       
       let results = JSON.parse(response.data);
-      console.log(results);
 
       await db.update(MockEval).set({ mockAIQuestions: JSON.stringify(questions_answers), mockAIMetrics: JSON.stringify(results.metrics) , mockAIRecommentdations:results.recommendations }).where(eq(MockEval.mockID, mockID));
       setShownText("Interview Ended, Result shown in dashboard, End Session to Check Results");

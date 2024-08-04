@@ -46,8 +46,6 @@ const Page = () => {
         });
         if (response.status === 200) {
           const data = await response.json();
-          console.log(response)
-          console.log(data)
           setJobs(data.jobs)
         } else {
           console.error('Failed to fetch jobs:', response.statusText);

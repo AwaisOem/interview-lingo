@@ -100,7 +100,6 @@ const CreateEvaluationCard = () => {
         if(data==null)return;
         try {
             await db.insert(MockEval).values(data).execute();
-            console.log('Data inserted successfully');
         } catch (error) {
             console.error('Error inserting data to DB:', error);
         }
