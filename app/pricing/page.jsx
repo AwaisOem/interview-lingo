@@ -21,7 +21,7 @@ export default function Example() {
               repellendus etur quidem assumenda.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
-              <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included</h4>
+              <h4 className="flex-none text-sm font-semibold leading-6 text-primary">What's included</h4>
               <div className="h-px flex-auto bg-gray-100" />
             </div>
             <ul
@@ -29,17 +29,17 @@ export default function Example() {
               className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
             >
                 <li  className="flex gap-x-3">
-                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
                     30  mock interviews
                 </li>
                 
                 <li  className="flex gap-x-3">
-                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
                     1 audio call interview
                 </li>
                 
                 <li  className="flex gap-x-3">
-                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
                     limited feedback
                 </li>
             </ul>
@@ -53,7 +53,7 @@ export default function Example() {
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
                 </p>
                     <Link href="/sign-up">
-                <span className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                <span className="mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
                         Get started
                 </span>
                     </Link>
@@ -72,7 +72,7 @@ export default function Example() {
               repellendus etur quidem assumenda.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
-              <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included</h4>
+              <h4 className="flex-none text-sm font-semibold leading-6 text-primary">What’s included</h4>
               <div className="h-px flex-auto bg-gray-100" />
             </div>
             <ul
@@ -80,17 +80,17 @@ export default function Example() {
               className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
             >
                 <li className="flex gap-x-3">
-                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
                     unlimited  mock interviews
                 </li>
                 
                 <li  className="flex gap-x-3">
-                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
                     100 audio call interview
                 </li>
                 
                 <li  className="flex gap-x-3">
-                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
+                  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
                     unlimited feedback
                 </li>
             </ul>
@@ -104,7 +104,7 @@ export default function Example() {
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
                 </p>
                 <a
-                  className="disabled mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="disabled mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Coming Soon
                 </a>
