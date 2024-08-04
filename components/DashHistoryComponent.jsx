@@ -10,14 +10,16 @@ import { Skeleton } from './ui/skeleton';
 
 export default function DashHistoryComponent({userId}){
     const [results, setResults] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         (async()=>{
             const r = await db.select().from(MockEval).where(eq(MockEval.createdByID,userId)).execute();
             setResults(r)
+            setLoading(false);
         })()
     }, [])
 
-    if(results.length ==0){
+    if(loading){
         return (<Skeleton className="w-[300px] h-[150px]" />)
     }
     return results.map(e=>(
