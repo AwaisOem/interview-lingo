@@ -1,3 +1,4 @@
+
 # MockView
 
 AI assistant which help with interviews, hiring, personality development and communication skills
@@ -8,56 +9,56 @@ AI assistant which help with interviews, hiring, personality development and com
 - Job recommendations based on your resume 
 ## Tech Stack
 
-*Client:* Next.js, TailwindCSS, Shadcn, Clerk, Analytics
+**Client:** Next.js, TailwindCSS, Shadcn, Clerk, Analytics
 
-*Server:* Next.js API, Whisper OpenAI, AI71, pdf-parse
+**Server:** Next.js API, Whisper OpenAI, AI71, pdf-parse
 
-*Database:* PostgreSQL (Neon), Drizzle ORM
+**Database:** PostgreSQL (Neon), Drizzle ORM
 
 
 ## Run on Local Machine
 
 To deploy this project run:
 
-- first create .env.local in root and add these
+- first create `.env.local` in root and add these
 
-- get NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and `CLERK_SECRET_KEY`from clerk dashboard after creating fresh project.
+- get `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`from clerk dashboard after creating fresh project.
 
-- create postgres DB anywhere you want ([neon](https://github.com/neondatabase/neon) recommended) and then paste url in NEXT_PUBLIC_DRIZZLE_DATABASE_URL
+- create postgres DB anywhere you want ([neon](https://github.com/neondatabase/neon) recommended) and then paste url in `NEXT_PUBLIC_DRIZZLE_DATABASE_URL`
 
-- get AI71_API_KEY from [ai71.ai](https://ai71.ai/)
+- get `AI71_API_KEY` from [ai71.ai](https://ai71.ai/)
 
-- JSEARCH_API_KEY from [job search api](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)
+- `JSEARCH_API_KEY` from [job search api](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)
 
-- get OPEN_API_KEY from [openai.com](https://openai.com/)
+- get `OPEN_API_KEY` from [openai.com](https://openai.com/)
 
-bash
+```bash
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=secret
     CLERK_SECRET_KEY=secret
     NEXT_PUBLIC_DRIZZLE_DATABASE_URL=secret
     AI71_API_KEY=secret
     JSEARCH_API_KEY=secret
     OPEN_API_KEY=secret
+```
 
-
-- in drizzle.config.js change process.env.NEXT_PUBLIC_DRIZZLE_DATABASE_URL to your real database url, bcz env variables don't work in this file  
+- in `drizzle.config.js` change `process.env.NEXT_PUBLIC_DRIZZLE_DATABASE_URL` to your real database url, bcz env variables don't work in this file  
 
 - after that run these commmands in row
 
-bash
+```bash
   npm i
-
-bash
+```
+```bash
   npm run db:push
-
-bash
+```
+```bash
   npm run dev
-
+```
 - to see and manage DB entries, run this
 
-bash
+```bash
   npm run db:studio
-
+```
 
 Congradulations Your Local Setup is Ready
 
@@ -66,3 +67,4 @@ Congradulations Your Local Setup is Ready
 - [@awaisoem](https://www.github.com/awaisoem)
 - [@arsalanahmad123](https://www.github.com/arsalanahmad123)
 - [@Ameer-Hamza289](https://www.github.com/Ameer-Hamza289)
+
