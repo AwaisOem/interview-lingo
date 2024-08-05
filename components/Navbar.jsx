@@ -16,7 +16,7 @@ const Navbar = () => {
             src="https://tailwindui.com/img/logos/mark.svg?color=neutral&shade=900"
             className="h-8 w-auto"
             />
-        <span className="font-bold text-black">Mockview</span>
+        <span className="font-bold text-black">InterviewLingo</span>
       </div>
         </Link>
     
