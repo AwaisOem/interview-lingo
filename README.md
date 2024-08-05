@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MockView
 
-## Getting Started
+AI assistant which help with interviews, hiring, personality development and communication skills
 
-First, run the development server:
+#### main functionalities:
+- AI chat based mock evaluation(interview) 
+- AI voice based mock evaluation(interview) 
+- Job recommendations based on your resume 
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*Client:* Next.js, TailwindCSS, Shadcn, Clerk, Analytics
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*Server:* Next.js API, Whisper OpenAI, AI71, pdf-parse
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+*Database:* PostgreSQL (Neon), Drizzle ORM
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Run on Local Machine
 
-To learn more about Next.js, take a look at the following resources:
+To deploy this project run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- first create .env.local in root and add these
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- get NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and `CLERK_SECRET_KEY`from clerk dashboard after creating fresh project.
 
-## Deploy on Vercel
+- create postgres DB anywhere you want ([neon](https://github.com/neondatabase/neon) recommended) and then paste url in NEXT_PUBLIC_DRIZZLE_DATABASE_URL
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- get AI71_API_KEY from [ai71.ai](https://ai71.ai/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- JSEARCH_API_KEY from [job search api](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)
+
+- get OPEN_API_KEY from [openai.com](https://openai.com/)
+
+bash
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=secret
+    CLERK_SECRET_KEY=secret
+    NEXT_PUBLIC_DRIZZLE_DATABASE_URL=secret
+    AI71_API_KEY=secret
+    JSEARCH_API_KEY=secret
+    OPEN_API_KEY=secret
+
+
+- in drizzle.config.js change process.env.NEXT_PUBLIC_DRIZZLE_DATABASE_URL to your real database url, bcz env variables don't work in this file  
+
+- after that run these commmands in row
+
+bash
+  npm i
+
+bash
+  npm run db:push
+
+bash
+  npm run dev
+
+- to see and manage DB entries, run this
+
+bash
+  npm run db:studio
+
+
+Congradulations Your Local Setup is Ready
+
+## Authors
+
+- [@awaisoem](https://www.github.com/awaisoem)
+- [@arsalanahmad123](https://www.github.com/arsalanahmad123)
+- [@Ameer-Hamza289](https://www.github.com/Ameer-Hamza289)
