@@ -1,5 +1,5 @@
 
-# MockView
+# InterviewLingo
 
 AI assistant which help with interviews, hiring, personality development and communication skills
 
