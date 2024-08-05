@@ -205,7 +205,7 @@ const Footer = () => {
   return (
     <footer className="relative pt-6 bg-transparent text-center mt-auto bottom-0">
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30 transform -translate-y-1  rounded-lg"></div>
-      <p>&copy; 2024 Mockview. All rights reserved.</p>
+      <p>&copy; 2024 InterviewLingo. All rights reserved.</p>
     </footer>
   );
 };
