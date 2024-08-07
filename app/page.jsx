@@ -2,6 +2,7 @@ import { SignedIn } from "@clerk/nextjs";
 import { SignedOut } from "@clerk/nextjs";
 import { BriefcaseIcon, GlobeAltIcon, UserGroupIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import VideoPlayer from "@/components/VideoPlayer";
 
 
 export default function Home() {
@@ -31,13 +32,13 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl animate-in slide-in-from-top-7 delay-300 duration-1000 lg:text-center text-left">
             Revolutionize Your Hiring Process with AI
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 animate-in slide-in-from-bottom-7 delay-300 duration-1000 lg:text-center text-left">
             Transform the way you conduct interviews with our advanced AI-powered system. Experience seamless multilingual support, real-time feedback, and in-depth analysis to hire the best talent efficiently.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center lg:justify-center justify-start gap-x-6">
               <SignedOut>
                 <Link
                   href="/sign-up"
@@ -80,9 +81,15 @@ export default function Home() {
             className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
           />
         </div>
+          <VideoPlayer />
           <FeaturesSection />
           <TargetAudienceSection />
           <GoalsSection />
+          <div className="w-fit p-5  flex flex-col absolute lg:top-56 gap-2 rounded-md animate-in slideInFromLeft delay-1000 duration-1000 " id="demo-div">
+                <h3 className="font-semibold">For testing purposes use these credentials</h3>
+                <span className="flex justify-between items-center"><span className="">Email:</span> test@gmail.com</span>
+                <span className="flex justify-between items-center"><span>Password:</span> 123456</span>
+          </div>
       </div>
         <Footer />
     </>
@@ -118,7 +125,7 @@ const TargetAudienceSection = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-6 lg:px-8">
-        <h2 className="text-5xl font-bold text-center mb-12">Our Target Audience</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">Our Target Audience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {targetAudiences.map((audience, index) => (
             <div key={index} className="relative p-8 border-2 border-gray-200 rounded-lg shadow-md bg-white">
@@ -242,7 +249,7 @@ const FeaturesSection = () => {
   return (
     <section className="py-52 bg-transparent relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <h2 className="text-5xl font-bold text-center mb-20">Features</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-20">Features</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div

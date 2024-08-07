@@ -23,9 +23,9 @@ export default function DashHistoryComponent({userId}){
         return (<Skeleton className="w-[300px] h-[150px]" />)
     }
     return results.map(e=>(
-      <Card key={e.mockID} className="w-[300px]">
+      <Card key={e.mockID} className="min-w-[300px]">
           <CardHeader>
-              <CardTitle>{e.mockTitle}</CardTitle>
+              <CardTitle  className="text-xl font-bold uppercase">{e.mockTitle}</CardTitle>
               <CardDescription className="truncate">#{e.mockID}</CardDescription>
           </CardHeader>
           <CardFooter className="flex gap-3 justify-between items-stretch">

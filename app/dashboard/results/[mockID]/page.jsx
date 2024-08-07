@@ -26,7 +26,7 @@ export default   function Page ({params}) {
     return (
       <Card className="w-full flex flex-col items-center mt-20">
       <CardHeader className="flex flex-col items-center">
-        <CardTitle>{results[0].mockTitle}</CardTitle>
+        <CardTitle className="uppercase">{results[0].mockTitle}</CardTitle>
         <CardDescription className="text-center">Evaluation Result</CardDescription>
       </CardHeader>
       <CardContent>

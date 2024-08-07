@@ -31,13 +31,15 @@ export default function Page({ params }) {
         <div className="flex flex-col">
           <header className="sticky top-0 z-10 flex h-[57px] items-center gap-1 border-b bg-background px-4">
             <h1 className="text-xl font-semibold">Mock Call</h1>
-            <Button
-              variant="destructive"
-              size="sm"
-              className="ml-auto gap-1.5 text-sm"
-            >
-              End Session
-            </Button>
+            <Link href="/dashboard">
+              <Button
+                variant="destructive"
+                size="sm"
+                className="ml-auto gap-1.5 text-sm"
+                >
+                End Session
+              </Button>
+            </Link>
           </header>
           <main className="grid flex-1 gap-4 overflow-auto p-4">
             <div className="relative flex gap-2 items-center justify-center h-full min-h-[50vh] flex-col rounded-xl bg-muted/50 p-4 lg:col-span-2">
@@ -277,7 +279,7 @@ function CallCard({mockID}) {
       }
       {interviewStarted && !interviewEnded && (<>
         <Button onClick={recording ? handleStopSpeaking:handleSpeak} disabled={botSpeaking || thinking} vairant={recording ?"destructive":"primary"} className="flex-1">{recording ? "Stop Recording":"Speak to AI"}</Button>
-        <Button onClick={handleIntruppt} disabled={!botSpeaking || thinking} variant="secondary" className="flex-1">Intruppt</Button>
+        <Button onClick={handleIntruppt} disabled={!botSpeaking || thinking} variant="secondary" className="flex-1">Interrupt</Button>
       </>
       )}
       {!interviewStarted && !interviewEnded && (

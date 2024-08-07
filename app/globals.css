@@ -77,3 +77,40 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+#demo-div{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slide-in-from-left {
+from {
+  scale: 0.98;
+  opacity: 0;
+}
+to {
+  opacity: 1;
+  scale: 1;
+}
+}
+
+.slideInFromLeft {
+animation: slide-in-from-left 1s ease-in-out forwards;
+}
+
+.video-container {
+position: relative; /* Ensure the pseudo-element is positioned relative to the container */
+}
+
+.video-container::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 90%;
+height: 15px; 
+box-shadow: 0 10px 15px 20px rgba(17, 24, 39, 0.1), 0 4px 6px -2px rgba(17, 24, 39, 0.05);
+z-index: -1; 
+border-radius: 8px; 
+}
