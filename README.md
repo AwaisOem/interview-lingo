@@ -10,7 +10,11 @@ AI assistant which help with interviews, hiring, personality development and com
 
 ## Video Demo
 
-<video src="https://github.com/AwaisOem/interview-lingo/blob/main/public/mockview-demo.mp4" width="320" height="240" controls></video>
+<video src="" width="320" height="240" controls></video>
+[![Watch the video](https://raw.githubusercontent.com/username/repository/branch/path/to/thumbnail.jpg)](https://raw.githubusercontent.com/username/repository/branch/path/to/video.mp4)
+
+[asd](https://raw.githubusercontent.com/interview-lingo/blob/main/public/mockview-demo.mp4)
+
 
 ## Tech Stack
 
