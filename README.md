@@ -3,10 +3,15 @@
 
 AI assistant which help with interviews, hiring, personality development and communication skills
 
-#### main functionalities:
+## main functionalities:
 - AI chat based mock evaluation(interview) 
 - AI voice based mock evaluation(interview) 
 - Job recommendations based on your resume 
+
+## Video Demo
+
+<video src="https://github.com/AwaisOem/interview-lingo/blob/main/public/mockview-demo.mp4" width="320" height="240" controls></video>
+
 ## Tech Stack
 
 **Client:** Next.js, TailwindCSS, Shadcn, Clerk, Analytics
